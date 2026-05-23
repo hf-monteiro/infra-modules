@@ -8,11 +8,11 @@ resource "aws_directory_service_directory" "exp-directory" {
 
   # VPC settings for hosting the directory service
   vpc_settings {
-    vpc_id     = var.vpc_id    # ID of the VPC for the directory service
-    subnet_ids = var.subnets   # Subnet IDs within the VPC for the directory
+    vpc_id     = var.vpc_id  # ID of the VPC for the directory service
+    subnet_ids = var.subnets # Subnet IDs within the VPC for the directory
   }
 
   tags = {
-    "environment" = var.env    # Tag the resource with the environment for easier management
+    "environment" = var.env # Tag the resource with the environment for easier management
   }
 }
