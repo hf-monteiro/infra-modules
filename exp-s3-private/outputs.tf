@@ -3,5 +3,5 @@
 # The ARN is a unique identifier that represents the bucket resource within AWS,
 # allowing it to be referenced by other resources or applications.
 output "bucket-arn" {
-    value = aws_s3_bucket.private-bucket.arn
+  value = aws_s3_bucket.private-bucket.arn
 }

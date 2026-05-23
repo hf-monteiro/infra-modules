@@ -32,7 +32,7 @@ resource "aws_s3_bucket_acl" "bucket-acl" {
   ] # Ensure public access block and ownership controls are set before ACL
 
   bucket = aws_s3_bucket.bucket.id # Reference the created bucket
-  acl    = "public-read" # Set bucket ACL to public-read
+  acl    = "public-read"           # Set bucket ACL to public-read
 }
 
 # Configure Cross-Origin Resource Sharing (CORS) for the bucket
@@ -43,8 +43,8 @@ resource "aws_s3_bucket_cors_configuration" "bucket-cors" {
     allowed_headers = var.allowed_headers # Headers allowed in requests
     allowed_methods = var.allowed_methods # HTTP methods allowed
     allowed_origins = var.allowed_origins # Origins allowed to send requests
-    expose_headers  = var.expose_headers # Headers exposed to the browser
-    max_age_seconds = var.max_age # Time browser can cache the preflight response
+    expose_headers  = var.expose_headers  # Headers exposed to the browser
+    max_age_seconds = var.max_age         # Time browser can cache the preflight response
   }
 }
 
